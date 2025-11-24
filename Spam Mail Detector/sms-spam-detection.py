@@ -224,14 +224,3 @@ if __name__ == '__main__':
 	args = parser.parse_args()
 
 	main(dataset_path=args.dataset, input_text=args.text, verbose=args.verbose, save_model=args.save_model, load_model=args.load_model)
-
-if __name__ == '__main__':
-	parser = argparse.ArgumentParser(description='Simple SMS spam detector (minimal output)')
-	parser.add_argument('--text', '-t', type=str, help='Provide a single SMS text to classify')
-	parser.add_argument('--verbose', '-v', action='store_true', help='Show brief progress and saved artifact names')
-	parser.add_argument('--dataset', '-d', type=str, default='spam.csv', help='Path to spam.csv dataset')
-	parser.add_argument('--save-model', action='store_true', help='Save the trained best model, vectorizer and label encoder')
-	parser.add_argument('--load-model', action='store_true', help='Load a previously saved model and skip training')
-	args = parser.parse_args()
-
-	main(dataset_path=args.dataset, input_text=args.text, verbose=args.verbose, save_model=args.save_model, load_model=args.load_model)
